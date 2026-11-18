@@ -1,42 +1,44 @@
 {
   "expo": {
-    "name": "cricket-quiz-fresh",
+    "name": "CRICKET QUIZ APP",
     "slug": "cricket-quiz-fresh",
     "version": "1.0.0",
+    "scheme": "cricketquizapp",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "cricketquizfresh",
-    "userInterfaceStyle": "automatic",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "supportsTablet": true,
+      "bundleIdentifier": "com.haris.cricketquizapp"
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/images/android-icon-foreground.png",
-        "backgroundImage": "./assets/images/android-icon-background.png",
-        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#121212"
       },
-      "predictiveBackGestureEnabled": false
+      "package": "com.haris.cricketquizapp"
     },
     "web": {
-      "output": "server",
-      "favicon": "./assets/images/favicon.png"
+      "bundler": "metro"
     },
     "plugins": [
       "expo-router",
+      "expo-web-browser",
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#208AEF",
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 76
+          "image": "./assets/icon.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#121212"
         }
-      ]
+      ],
+      "expo-font"
     ],
-    "experiments": {
-      "typedRoutes": true,
-      "reactCompiler": true
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "204877c0-480d-43b6-80ff-adc29b88429c"
+      }
     }
   }
 }
